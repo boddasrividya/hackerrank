@@ -1,0 +1,26 @@
+#include <math.h>
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+#include <assert.h>
+#include <limits.h>
+#include <stdbool.h>
+int main()
+{
+    int n,k,i,j,height[1000],jump,temp,max;
+    scanf("%d %d",&n,&k);
+    for(i=0;i<n;i++)
+        scanf("%d",&height[i]);
+    for(i=0;i<n;i++)
+       for(j=i;j<n;j++)
+           if(height[i]>height[j])
+           {
+               temp=height[i];
+               height[i]=height[j];
+               height[j]=temp;
+           }
+    max=height[n-1];
+    if(max>k)
+           jump=abs(max-k);
+    printf("%d",jump);
+}
