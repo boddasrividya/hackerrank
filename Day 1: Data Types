@@ -1,0 +1,12 @@
+ int a;
+    double b;
+    char c[100];
+    scanf("%d",&a);
+    scanf("%lf",&b);
+    getchar();
+    scanf("%[^\n]s",c);
+    printf("%d\n",(i+a));
+    printf("%.1lf\n",(d+b));
+   // strcat(s,c);
+    printf("%s%s",s,c);
+    
