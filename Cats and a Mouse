@@ -1,0 +1,26 @@
+#include <assert.h>
+#include <limits.h>
+#include <math.h>
+#include <stdbool.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int main()
+{
+    int q,x,y,z,p,r;
+    scanf("%d",&q);
+    while(q--)
+    {
+        scanf("%d %d %d",&x,&y,&z);
+        p=abs(x-z);
+        r=abs(y-z);
+        if(p<r)
+            printf("Cat A\n");
+        else if(p>r)
+            printf("Cat B\n");
+        else
+            printf("Mouse C\n");
+    }
+    return 0;
+}
